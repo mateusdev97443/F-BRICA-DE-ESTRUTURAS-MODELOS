@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Simples | Fábrica de Modelos</title>
+  <meta name="description" content="Tela de login simples e profissional. Modelo pronto para uso em projetos web.">
+  <meta name="author" content="Mateus Ernandes Turet Ribeiro">
+  <meta property="og:title" content="Login Simples | Fábrica de Modelos">
+  <meta property="og:description" content="Tela de login profissional pronta para uso.">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --cor-primaria: #1a3b5d;
+      --cor-primaria-hover: #0f2a45;
+      --cor-branca: #ffffff;
+      --cor-texto-escuro: #333333;
+      --cor-texto-medio: #666666;
+      --cor-texto-claro: #888888;
+      --cor-borda-input: #e0e0e0;
+      --sombra-card: 0 20px 50px rgba(0, 0, 0, 0.3);
+      --border-radius: 8px;
+      --border-radius-grande: 16px;
+      --fonte-principal: 'Segoe UI', Arial, sans-serif;
+      --transicao-padrao: 0.3s ease;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--fonte-principal);
+      background: linear-gradient(135deg, #1a3b5d 0%, #2a5f8a 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .login-container {
+      background: var(--cor-branca);
+      border-radius: var(--border-radius-grande);
+      box-shadow: var(--sombra-card);
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .login-icon {
+      background: var(--cor-primaria);
+      color: var(--cor-branca);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 0 auto 1rem;
+      font-weight: bold;
+    }
+
+    .login-title {
+      font-size: 1.5rem;
+      color: var(--cor-primaria);
+      margin-bottom: 0.25rem;
+    }
+    .login-subtitle {
+      color: var(--cor-texto-claro);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      text-align: left;
+      margin-bottom: 1.25rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--cor-texto-escuro);
+      margin-bottom: 0.4rem;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 2px solid var(--cor-borda-input);
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      transition: border-color var(--transicao-padrao);
+      font-family: var(--fonte-principal);
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--cor-primaria);
+    }
+
+    .form-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+    }
+    .form-options a {
+      color: var(--cor-primaria);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .form-options a:hover {
+      text-decoration: underline;
+    }
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--cor-texto-medio);
+    }
+    .remember-me input {
+      accent-color: var(--cor-primaria);
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 0.8rem;
+      background: var(--cor-primaria);
+      color: var(--cor-branca);
+      border: none;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background var(--transicao-padrao);
+      font-family: var(--fonte-principal);
+    }
+    .btn-login:hover {
+      background: var(--cor-primaria-hover);
+    }
+
+    .register-link {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--cor-texto-claro);
+    }
+    .register-link a {
+      color: var(--cor-primaria);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .login-container {
+        max-width: 90%;
+        padding: 2.5rem 2rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 2rem 1.5rem;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="login-container">
+
+      <div class="login-icon" aria-hidden="true">🔐</div>
+
+      <h1 class="login-title">Bem-vindo de volta</h1>
+      <p class="login-subtitle">Entre com seus dados para continuar</p>
+
+      <form>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="Sua senha" required>
+        </div>
+
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox"> Lembrar-me
+          </label>
+          <a href="#">Esqueci a senha</a>
+        </div>
+
+        <button type="submit" class="btn-login">Entrar</button>
+      </form>
+
+      <p class="register-link">
+        Não tem uma conta? <a href="#">Cadastre-se</a>
+      </p>
+
+    </div>
+  </main>
+</body>
+</html>
